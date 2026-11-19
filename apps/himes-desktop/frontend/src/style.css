@@ -1,0 +1,53 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #e8ebf4; background: #11151d; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select, textarea { font: inherit; }
+button { border: 1px solid #7da1ff; border-radius: 8px; background: #577be3; color: #fff; padding: .6rem .9rem; cursor: pointer; font-weight: 650; }
+button:hover:not(:disabled) { background: #6d8ef0; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+button.secondary { background: transparent; border-color: #4e5869; }
+button.secondary:hover:not(:disabled) { background: #273044; }
+button[aria-pressed="true"] { background: #577be3; }
+button[aria-pressed="false"] { background: #202938; border-color: #4e5869; }
+input, select, textarea { min-width: 0; width: 100%; color: #f7f9ff; background: #1b2330; border: 1px solid #59667b; border-radius: 7px; padding: .6rem .7rem; }
+textarea { resize: vertical; }
+input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid #a5bdff; outline-offset: 2px; }
+main { max-width: 1060px; margin: auto; padding: 1.2rem; display: grid; gap: .9rem; }
+header, .row, .actions, .mode-switch { display: flex; align-items: end; gap: .65rem; }
+header { align-items: center; justify-content: space-between; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 0; font-size: 1.75rem; }
+h2 { font-size: 1.05rem; margin-bottom: .75rem; }
+.eyebrow { margin: 0 0 .15rem; color: #9cb6f6; font-size: .73rem; text-transform: uppercase; letter-spacing: .08em; }
+.status { padding: .4rem .65rem; border-radius: 999px; background: #5a2933; color: #ffd7db; font-size: .8rem; }
+.status.on { background: #1e523e; color: #bdf5d8; }
+.panel { border: 1px solid #303b4e; border-radius: 12px; padding: 1rem; background: #181f2a; }
+.connection { display: grid; gap: .65rem; }
+label { display: grid; gap: .3rem; font-size: .82rem; color: #c8d2e4; min-width: 160px; }
+.grow { flex: 1; }
+.hint { font-size: .77rem; color: #a6b2c7; margin: .5rem 0 0; line-height: 1.5; }
+.messages { min-height: 150px; max-height: 360px; overflow: auto; display: grid; align-content: start; gap: .7rem; padding: .4rem 0 .85rem; }
+.message { max-width: 92%; border-radius: 9px; padding: .75rem .9rem; background: #263044; white-space: pre-wrap; overflow-wrap: anywhere; }
+.message.user { justify-self: end; background: #344c85; }
+.message span { color: #bbcae7; font-size: .72rem; font-weight: 700; text-transform: uppercase; }
+.message p { margin: .3rem 0 0; line-height: 1.5; }
+.chat form { display: grid; gap: .55rem; }
+.chat form button { justify-self: end; }
+.empty { color: #94a2bc; }
+.confirmation, .alert { margin-top: .8rem; border: 1px solid #ad8944; border-radius: 8px; background: #3e3426; padding: .8rem; }
+.confirmation p { margin-bottom: .5rem; }
+.alert.error { border-color: #ab5960; background: #452930; }
+.activity summary { cursor: pointer; }
+.activity ol { margin-bottom: 0; padding-left: 1.2rem; color: #bcc8dc; font-size: .8rem; }
+.activity li { padding: .15rem 0; }
+.subagent-list { max-height: 230px; overflow: auto; padding: .7rem; border-radius: 7px; color: #cad4e8; background: #111722; font-size: .76rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.session-heading { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
+.session-heading h3 { margin: 0; font-size: .9rem; }
+.session-heading button { padding: .35rem .55rem; font-size: .78rem; }
+.session-list { list-style: none; display: grid; gap: .4rem; max-height: 210px; overflow-y: auto; margin: .6rem 0 0; padding: 0; }
+.session-choice { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem; text-align: left; background: #202a39; border-color: #43516a; font-weight: 400; }
+.session-choice strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.session-choice span { flex: none; color: #b4c1d8; font-size: .72rem; }
+.session-choice[aria-current="true"] { border-color: #93b0ff; }
+@media (max-width: 720px) { .row { align-items: stretch; flex-direction: column; } .row > * { width: 100%; } header { align-items: start; } }
+@media (max-width: 720px) { .session-choice { align-items: start; flex-direction: column; gap: .15rem; } }
